@@ -7,7 +7,8 @@ public class GestorEstudiantes {
 
     public void anadirEstudiante(Estudiante [] estudiantes) throws InterruptedException {
 
-        Scanner sc = new Scanner (System.in);
+        if(contadorEstudiantes < estudiantes.length) {
+            Scanner sc = new Scanner (System.in);
 
         String inputNombre = "";
         String inputApellidos = "";
@@ -36,6 +37,9 @@ public class GestorEstudiantes {
             contadorEstudiantes++;  // Quizás haya que añadir esta variable en el main
         } else {
             System.out.println("El email generado no es válido");
+        }
+        } else {
+            System.out.println("Has alcanzado el máximo de alumnos a registrar");
         }
 
     }
